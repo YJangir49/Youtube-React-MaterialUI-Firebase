@@ -5,12 +5,16 @@ import { makeStyles, Chip } from '@material-ui/core';
 const useStyles = makeStyles(() => ({
     filter__container: {
         display: 'flex',
-        padding: '1rem 2rem',
+        padding: '1rem 6rem',
         height: "2rem",
-        borderBottom: "1px solid #303030",
+        border: "1px solid #303030",
         alignItems: "center",
         gap: '1rem',
-        flexWrap: "wrap"
+        flexWrap: "wrap",
+        position: 'fixed',
+        backgroundColor: '#181818',
+        width: '100%',
+        top: '60'
     },
     chipStyle:{
         backgroundColor: '#373737', 
