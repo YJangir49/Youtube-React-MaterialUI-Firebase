@@ -16,25 +16,22 @@
 .flex__wrap{
     flex-wrap: wrap;
 }
-.app_container{
-     display: flex;
-     color: #fff;
-}
 
 .sidebar__container{
-    flex: 0.05;
     background-color: #202020;
-    height: 120vh;
+    height: 100%;
     color: #fff;
     margin: auto;
     border-top: 1px solid #202020;
+    position: fixed;
+    z-index: 100;
 }
 
 .home__container{
-    flex: 0.95;
+    padding-left: 4rem;
     background-color: #181818;
     border-top: 1px solid #303030;
-    height: 120vh;
+    color: #fff;
 }
 
 .sidebar__iconContainer{

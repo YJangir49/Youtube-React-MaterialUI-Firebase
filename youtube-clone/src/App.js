@@ -10,10 +10,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="app">
         <Header />
-        <div className="app_container">
           <SideMenubar/>
           <Home />
-        </div>
       </div>
     </ThemeProvider>    
   );
