@@ -23,17 +23,20 @@ const useStyles = makeStyles(() => ({
         display: 'flex',
         color: '#fff',
         alignItems: 'center',
-        // gap: '1rem',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        position: 'sticky',
+        top: 0,
+        zIndex: 100
     },
     LogoContainer: {
         padding: '0 1.5rem',
         display: 'flex',
         alignItems: 'center',
-        // flex: "0.2"
     },
     menuIcon:{
-        cursor: 'pointer'
+        cursor: 'pointer',
+        width: '1.5rem',
+        height: "1.5rem"
     },
     searchIcon: {
         backgroundColor: '#303030',
@@ -42,7 +45,6 @@ const useStyles = makeStyles(() => ({
         cursor: 'pointer',
         borderRadius: '0 2px 2px 0',
         height: '27px'
-        // flex: '0.1'
     },
     searchContainer: {
         display: 'flex',

@@ -1,3 +1,88 @@
 /* #search:focus {
     outline: none;
 } */
+.flex__center{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.flex{
+    display: flex; 
+    align-items: center;
+}
+.gap {
+    gap: 0.2rem;
+}
+.flex__wrap{
+    flex-wrap: wrap;
+}
+.app_container{
+     display: flex;
+     color: #fff;
+}
+
+.sidebar__container{
+    flex: 0.05;
+    background-color: #202020;
+    height: 110vh;
+    color: #fff;
+    margin: auto;
+    border-top: 1px solid #202020;
+}
+
+.home__container{
+    flex: 0.95;
+    background-color: #181818;
+    border-top: 1px solid #303030;
+    height: 110vh;
+}
+
+.sidebar__iconContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0.3rem;
+    gap: 0.3rem
+}
+
+
+.icon__menu{
+    height: 1.5rem !important;
+    width: 1.5rem !important;
+}
+
+.videocard__container{
+    display: inline-block;
+    width: 280px;
+    padding: 0.5rem;
+}
+.videocard__img{
+    width: 100%;
+}
+
+.videocard__contentContainer{
+    display: flex;
+    margin-top: 0.7rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.videocard__contentTitle{
+    line-height: 1;
+}
+
+.videocard__content{
+    color: #aaa;
+    margin-bottom: 0% !important;
+}
+
+.icon__verify{
+    height: 1rem !important;
+    width: 1rem !important;
+}
+
+
+.videocard__items{
+    margin-left: 0.35rem;
+}
