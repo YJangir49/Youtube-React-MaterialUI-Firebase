@@ -1,11 +1,10 @@
 import './App.css';
+import Header from './Components/Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hi its a youtube clone basic setup using Create React App.</h1>
-      </header>
+    <div className="app">
+      <Header />
     </div>
   );
 }
