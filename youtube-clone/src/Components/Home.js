@@ -15,8 +15,8 @@ function Home({videos}) {
                             channelName={v.snippet.channelTitle}
                             views="66M" 
                             time="2 days ago"
-                            avatar={'ManBhariya.png'}
                             thumbnail={v.snippet.thumbnails.medium}
+                            id={v.id.videoId}
                         />)
                     }
                     </div>

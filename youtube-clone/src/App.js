@@ -3,9 +3,11 @@ import './App.css';
 import Header from './Components/Header';
 import SideMenubar from './Components/SideMenubar';
 import Home from './Components/Home';
+import VideoDetail from './Containers/VideoDetail';
 import theme from './Theme/defaultTheme';
 import youtube from './API/youtube-api';
 import { useState } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
 const [videos, setVideos] = useState([]);
@@ -16,7 +18,10 @@ const [videos, setVideos] = useState([]);
       <div className="app">
         <Header handleSubmit={handleSubmit}/>
           <SideMenubar/>
-          <Home videos={videos}/>
+          <Switch>
+            <Route exact path="/video/:id" component={VideoDetail}/>
+            <Route path="/" component={() => <Home videos={videos}/>}/>
+          </Switch>
       </div>
     </ThemeProvider>    
   );
@@ -26,7 +31,7 @@ const [videos, setVideos] = useState([]);
       params: {
         part: "snippet",
         maxResults: 40,
-        key: 'YOUR_API_KEY',
+        key: 'YOUR_KEY',
         q: searchTerm,
       }
     });
