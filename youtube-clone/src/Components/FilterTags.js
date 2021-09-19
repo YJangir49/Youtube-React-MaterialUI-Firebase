@@ -14,12 +14,19 @@ const useStyles = makeStyles(() => ({
         position: 'fixed',
         backgroundColor: '#181818',
         width: '100%',
-        top: '60'
+        top: '60',
+        zIndex: 98
     },
     chipStyle:{
         backgroundColor: '#373737', 
         border: '1px solid #ffffff1a', 
         color: '#fff', 
+        fontSize: '0.8rem !important'
+    },
+    activeChip:{
+        backgroundColor: '#fff', 
+        border: '1px solid #ffffff1a', 
+        color: '#000', 
         fontSize: '0.8rem !important'
     },
 }))
@@ -29,7 +36,7 @@ function FilterTags() {
     const classes = useStyles();
     return (
         <div className={classes.filter__container}>
-           <Chip label="All" />
+           <Chip label="All" className={classes.activeChip}/>
            <Chip label="Music" className={classes.chipStyle}/>
            <Chip label="Mixes" className={classes.chipStyle}/>
            <Chip label="Kapil Sharma" className={classes.chipStyle}/>

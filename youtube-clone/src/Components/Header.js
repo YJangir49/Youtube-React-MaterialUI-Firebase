@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { makeStyles, Button } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
@@ -88,7 +88,9 @@ const useStyles = makeStyles(() => ({
         color: '#fff',
         borderRadius: '50%',
         padding: '6px',
-        marginLeft: '10px'
+        marginLeft: '10px',
+        height: "1.5rem",
+        width: '1.5rem'
     },
     appIcon:{
         cursor: 'pointer',
@@ -96,7 +98,9 @@ const useStyles = makeStyles(() => ({
         color: '#fff',
         borderRadius: '50%',
         padding: '5px',
-        marginLeft: '5px'
+        marginLeft: '5px',
+        height: "1.5rem",
+        width: '1.5rem'
     },
     signInButton: {
         color: '#3ea6ff',
@@ -112,10 +116,21 @@ const useStyles = makeStyles(() => ({
 }))
 
 
-function Header() {
+function Header({handleSubmit}) {
     const classes = useStyles();
     const [searchTerm, setSearchTerm] = useState('');
     const [focus, setFocus] = useState(false);
+
+    useEffect(() => {
+        handleSubmit('latest');
+    }, [])
+
+    const onKeyPress = (event) => {
+        if (event.key === "Enter") {
+          handleSubmit(searchTerm);
+        }
+    }
+
     return (
         <div className={classes.Header}>
             <div className={classes.LogoContainer}>
@@ -134,10 +149,11 @@ function Header() {
                         onChange={e => setSearchTerm(e.target.value)}
                         onFocus={() => setFocus(true)}
                         onBlur={() => setFocus(false)}
+                        onKeyPress={onKeyPress}
                     />
-                    <ClearIcon className={classes.clearIcon} onClick={() => setSearchTerm('')}/>
+                    {searchTerm && <ClearIcon className={classes.clearIcon} onClick={() => setSearchTerm('')}/>}
                 </div>
-                <SearchIcon className={classes.searchIcon} />
+                <SearchIcon className={classes.searchIcon} onClick={() => handleSubmit(searchTerm)}/>
                 <MicIcon className={classes.micIcon}/>
             </div>
             <div className={classes.iconsContainer}>

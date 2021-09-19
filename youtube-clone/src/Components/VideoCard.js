@@ -3,10 +3,10 @@ import React from 'react';
 import { Avatar, Typography } from '@material-ui/core';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 
-function VideoCard({title, channelName, views, time, avatar}) {
+function VideoCard({title, channelName, views, time, avatar, thumbnail}) {
     return (
         <div className="videocard__container">
-            <img src={avatar} className='videocard__img'/>
+            <img src={thumbnail.url} className='videocard__img' />
             <div className="videocard__contentContainer">
                 <Avatar src={avatar}/> 
                 <div>
