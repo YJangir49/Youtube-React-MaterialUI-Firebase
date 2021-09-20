@@ -8,7 +8,7 @@ import AppsOutlinedIcon from '@material-ui/icons/AppsOutlined';
 import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import { YoutubeLogo } from '../Assets/SVGComponents';
-
+import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles(() => ({
@@ -135,7 +135,7 @@ function Header({handleSubmit}) {
         <div className={classes.Header}>
             <div className={classes.LogoContainer}>
                 <MenuIcon className={classes.menuIcon}/>
-                <YoutubeLogo classes={classes}/>
+                <Link to="/"><YoutubeLogo classes={classes}/> </Link>
             </div>
             <div className={classes.searchContainer}>
                 <div className={focus ? classes.searchInputContainerOnFocus: classes.searchInputContainer}>
