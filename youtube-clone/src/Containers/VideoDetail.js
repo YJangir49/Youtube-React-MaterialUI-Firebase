@@ -1,4 +1,5 @@
 import React from 'react';
+import { Typography } from '@material-ui/core';
 
 function VideoDetail({ match }) {
     return (
@@ -10,6 +11,7 @@ function VideoDetail({ match }) {
                 title="Video Player"
                 src={`https://www.youtube.com/embed/${match.params.id}`}
             />
+            <Typography >Hum Dil De Chuke Sanam | Hum Dil De Chuke Sanam</Typography>
         </div>
     )
 }

@@ -94,7 +94,14 @@
 
 
 .videoPlayer__container{
-    margin-left: 5%;
-    height: 300px;
-    width: 700px;
+    margin-left: 6%;
+    margin-top: 1%;
+    height: 360px;
+    width: 600px;
+}
+
+.app{
+    background-color: #181818;
+    height: 100vh;
+    color: #fff;
 }
