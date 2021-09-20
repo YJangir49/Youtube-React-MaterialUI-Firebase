@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 firebase.js
+environment.env
 
 # testing
 /coverage
